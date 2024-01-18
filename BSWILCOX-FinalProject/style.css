@@ -1,0 +1,166 @@
+body {
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    position: relative; /* Create a stacking context for the body */
+    overflow: hidden; /* Hide any overflow from child elements */
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+nav {
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    font-size: 28px;
+    text-decoration: none;
+    color: #8fa19d;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f5f5f5;
+    padding: 20px;
+  }
+  
+.content {
+    padding: 20px;
+    color: #8fa19d;
+    position: relative; /* Create a stacking context for the content */
+    z-index: 1; /* Ensure the content is above the circular image */
+}
+
+#myName {
+    font-size: 72px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s;
+    color: #8fa19d;
+}
+
+#myName:hover {
+    transform: scale(1.2);
+}
+
+#description {
+    font-size: 18px;
+    color: #8fa19d;
+    margin-top: 10px;
+}
+
+.portfolio-button {
+    margin-top: 20px;
+    background-color: #333;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    position: absolute; /* Set to absolute positioning */
+    bottom: -205px; /* Adjust the distance from the bottom */
+    left: calc(50% - 90px);
+}
+
+.portfolio-button a {
+    text-decoration: none;
+    color: #8fa19d;
+    font-weight: bold;
+}
+
+.circular-image {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -400px;
+    left: calc(50% - 220px);
+    z-index: 0; /* Set a lower z-index to ensure the image is behind the content */
+}
+
+.h1 {
+    font-size: 36px;
+    color: #3D5C55;
+    margin-bottom: 20px;
+}
+
+.goals-entry {
+    margin-bottom: 40px;
+    text-align: center; /* Center the content within the goals-entry */
+}
+
+h2 {
+    font-size: 24px;
+    color: #3D5C55;
+}
+
+.goal-description {
+    font-size: 18px;
+    color: #8fa19d;
+    margin-top: 10px;
+}
+
+.with-animation .running-animation {
+    width: 400px; /* Adjust the width as needed */
+    height: 400px; /* Adjust the height as needed */
+    margin: 20px auto; /* Center the running-animation horizontally with top and bottom margin */
+    background: url('running.gif') no-repeat center center;
+    background-size: contain;
+    animation: runAnimation 2s linear infinite;
+}
+
+@keyframes runAnimation {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(50px); /* Adjust the horizontal movement as needed */
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+.portfolio-page {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .project {
+    flex-grow: 1;
+    overflow-y: scroll;
+  }
+  
+  .image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+.portfolio-image {
+        width: 50%;
+        margin-bottom: 20px;
+}
+
+.content table {
+    margin: 0 auto;
+  }
+  
